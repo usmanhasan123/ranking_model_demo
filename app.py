@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 import os
 import tempfile
+import json
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -48,7 +49,7 @@ if st.button("Get Recommendations"):
     st.write(private_key_json)
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as tmp:
-        tmp.write(private_key_json.encode())  # write bytes
+        tmp.write(json.dumps(private_key_json).encode())  # write bytes
         tmp.flush()
         creds_path = tmp.name
         
