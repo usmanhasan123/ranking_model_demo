@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+joblib
+gspread
+oauth2client
+streamlit-authenticator
+oauthlib
+scikit-learn
