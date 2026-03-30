@@ -46,7 +46,7 @@ if st.button("Get Recommendations"):
     
     # private_key_json=os.getenv('private_key_json')
     private_key_json=dict(st.secrets['private_key_json'])
-    st.write(private_key_json)
+    # st.write(private_key_json)
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as tmp:
         tmp.write(json.dumps(private_key_json).encode())  # write bytes
