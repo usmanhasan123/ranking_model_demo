@@ -43,8 +43,8 @@ def connect_to_gsheet(creds_json,spreadsheet_name):
 if st.button("Get Recommendations"):
     # features = generate_features(user_id, ITEMS)
     
-    private_key_json=os.getenv('private_key_json')
-    private_key_json=st.secrets('private_key_json')
+    # private_key_json=os.getenv('private_key_json')
+    private_key_json=st.secrets['private_key_json']
     st.write(private_key_json)
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as tmp:
